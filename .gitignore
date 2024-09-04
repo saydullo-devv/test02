@@ -1,0 +1,264 @@
+# Tomonidan yaratilgan https://www.toptal.com/developers/gitignore/api/python, pycharm + barchasi
+# Tahrirlash https://www.toptal.com/developers/gitignore?templates=python, pycharm + barchasi
+
+### PyCharm+barchasi ###
+# JetBrains IDEs qamrab: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, veb-bo'roni va chavandoz
+# Malumot: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+# Foydalanuvchiga xos narsalar
+.fikr / * * / ish maydoni.xml
+.fikr / * * / vazifalar.xml
+.fikr/ * * / foydalanish.statistika.xml
+.fikr / * * / lug'atlar
+.fikr/ * * / raf
+
+# Avs Foydalanuvchiga xos
+.fikr / * * / AVS.xml
+
+# Yaratilgan fayllar
+.fikr / * * / contentModel.xml
+
+# Nozik yoki yuqori darajadagi fayllar
+.fikr / * * / ma'lumotlar manbalari/
+.fikr / * * / ma'lumotlar manbalari.identifikatorlar
+.fikr / * * / ma'lumotlar manbalari.mahalliy.xml
+.fikr / * * / sqlDataSources.xml
+.fikr/ * * / dinamik.xml
+.fikr/ * * / uiDesigner.xml
+.fikr / * * / dbnavigator.xml
+
+# Gradle
+.fikr / * * / gradle.xml
+.fikr/ * * / kutubxonalar
+
+# Gradle va Maven avtomatik import bilan
+# Avtomatik import bilan Gradle yoki Maven-dan foydalanganda modul fayllarini chiqarib tashlashingiz kerak,
+# ular qayta qilinadi beri, va churn olib kelishi mumkin. Agar foydalanilsa, Uncomment
+# Avto-import.
+# .fikr / artefaktlar
+# .fikr / tuzuvchi.xml
+# .fikr/jarRepositories.xml
+# .fikr / modullar.xml
+# .fikr/*.iml
+# .fikr / modullar
+# *.iml
+# *.ipr
+
+# CMake
+cmake-qurish-*/
+
+# Mongo Explorer plagininame
+.fikr / * * / mongoSettings.xml
+
+# Faylga asoslangan loyiha formati
+*.iws
+
+# IntelliJ
+chiqish/
+
+# mpeltonen / sbt-idea plagininame
+.fikr_modullari/
+
+# Jira plagininame
+atlassian-ide-plagin.xml
+
+# Cursive Clojure plagininame
+.fikr / replstate.xml
+
+# SonarLint plagininame
+.fikr / sonarlint/
+
+# Crashlytics plagini (Android Studio va IntelliJ uchun)
+com_crashlytics_export_strings.xml
+crashlytics.xususiyatlari
+crashlytics-qurish.xususiyatlari
+mato.xususiyatlari
+
+# Muharrirga asoslangan dam olish mijozi
+.fikr / httpRequests
+
+# Android studio 3.1 + seriyali Kesh fayli
+.fikr/keshlash / build_file_checksums.ser
+
+### PyCharm + barcha yamoq ###
+# Kod uslubi sozlamalari va run konfiguratsiyalaridan boshqa hamma narsaga e'tibor bermang
+# bu jamoalar ichida taqsimlanishi kerak.
+
+.fikr/*
+
+!.fikr / kod uslublari
+!.fikr / runConfigurations
+
+### Python ###
+# Bayt-kompilyatsiya / optimallashtirilgan / DLL fayllari
+__pycache__/
+* . py[cod]
+* $py.sinf
+
+# C kengaytmalari
+* . shunday qilib
+
+# Tarqatish / qadoqlash
+.Python
+qurish/
+rivojlantirish-tuxum/
+dist/
+Yuklashlar/
+tuxum/
+.tuxum/
+lib/
+lib64paper size/
+qismlar/
+sdiststencils/
+var/
+g'ildiraklar/
+hissa / python-g'ildiraklar/
+*.tuxum-info/
+.o'rnatilgan.cfg
+*.tuxum
+MANIFEST
+
+# PyInstaller
+# Odatda bu fayllar shablondan python skripti tomonidan yoziladi
+# PyInstaller exe-ni qurishdan oldin, unga sana/boshqa infolarni kiritish uchun.
+*.manifest
+*.spec
+
+# O'rnatish jurnallari
+pip-log.txt
+pip-o'chirish-bu-katalog.txt
+
+# Birlik sinovi / qamrov hisobotlari
+htmlcovpaper size/
+.tox/
+.nox/
+.qamrov
+.qamrov.*
+.Kesh
+nosetests.xml
+qamrov.xml
+*.qopqoq
+* . py,qopqoq
+.gipoteza/
+.pytest_cache/
+qopqoq/
+
+# Tarjimalar
+* . mo
+*.qozon
+
+# Django narsalar:
+*.kirish
+local_settings.py
+JB.sqlite3paper size
+JB.sqlite3-jurnal
+
+# Kolbadagi narsalar:
+misol/
+.veb-to'plamlar-Kesh
+
+# Scrapy narsalar:
+.scrapy
+
+# Sfenks hujjatlari
+hujjatlar / _qurilish/
+
+# PyBuilder
+.pybuilder/
+maqsad/
+
+# Jupyter Daftarchasi
+.ipynb_checkpoints
+
+# IPython
+profil_default/
+ipython_config.py
+
+# pyenv
+# Kutubxona yoki paket uchun siz ushbu fayllarni e'tiborsiz qoldirishingiz mumkin, chunki kod
+# bir nechta muhitda ishlash uchun mo'ljallangan; aks holda ularni tekshiring:
+# .python-versiyasi
+
+# pipenv
+# Pypa ko'ra / pipenv#598, bu Pipfile o'z ichiga tavsiya etiladi.versiyani boshqarishda qulflang.
+# Biroq, hamkorlikda, agar platformaga xos bog'liqliklar yoki bog'liqliklar bo'lsa
+# o'zaro faoliyat platformani qo'llab-quvvatlamagan holda, pipenv ishlamaydigan yoki ishlamaydigan bog'liqliklarni o'rnatishi mumkin
+# barcha kerakli bog'liqliklarni o'rnating.
+# Pipfile.qulflash
+
+# she'riyat
+# Pipfile o'xshash.qulf, odatda she'rni kiritish tavsiya etiladi.versiyani boshqarishda qulflang.
+# Bu, ayniqsa, takrorlanuvchanlikni ta'minlash uchun ikkilik paketlar uchun tavsiya etiladi va ko'proq
+# odatda kutubxonalar uchun e'tiborga olinmaydi.
+# https://python-poetry.org/docs/basic-usage/#commit-your-poetrylock-file-to-version-control
+# she'riyat.qulflash
+
+# pdm
+# Pipfile o'xshash.qulflash, odatda pdm ni kiritish tavsiya etiladi.versiyani boshqarishda qulflang.
+# pdm.qulflash
+# PDM saqlaydi loyiha-keng konfiguratsiyalar bilan .pdm.toml, lekin uni kiritmaslik tavsiya etiladi
+# versiyani boshqarishda.
+# https://pdm.fming.dev/ # ide bilan foydalaning
+.pdm.toml
+
+# PEP 582; masalan tomonidan ishlatiladi. github.com/David-OConnor/pyflow va github.com/pdm-project/pdm
+__pypackages__/
+
+# Selderey narsalar
+celerybeat-jadval
+celerybeat.pid
+
+# SageMath tahlil qilingan fayllar
+*.sage.py
+
+# Muhitlar
+.env
+.venvpaper size
+env/
+venvpaper size/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder loyihasi sozlamalari
+.spyderproject
+.spyproject
+
+# Arqon loyihasi sozlamalari
+.ropeproject
+
+# mkdocs hujjatlari
+/ sayt
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre turini tekshiruvchi
+.pire/
+
+# pytype statik turdagi analizator
+.pitayp/
+
+# Cython disk raskadrovka ramzlari
+cython_debug/
+
+# PyCharm
+# JetBrains maxsus Andoza alohida JetBrains saqlanadi.gitignore bu mumkin
+# toping https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
+# va global gitignore-ga qo'shilishi yoki ushbu faylga birlashtirilishi mumkin. Ko'proq yadro uchun
+# variant (tavsiya etilmaydi) butun idea papkasini e'tiborsiz qoldirish uchun quyidagilarni bekor qilishingiz mumkin.
+#.fikr/
+
+### Python Yamog'i ###
+# She'riyat mahalliy konfiguratsiya fayli - https://python-poetry.org/docs/configuration/#local-configuration
+she'riyat.toml
+
+# ruff
+.ruff_cache/
+
+# LSP konfiguratsiya fayllari
+pyrightconfig.json
+
+# Oxiri https://www.toptal.com/developers/gitignore/api/python, pycharm + barchasi

@@ -1,0 +1,61 @@
+
+import sqlite3
+
+
+class DatabaseManager:
+    def __init__(self, db_name='sample.db'):
+        self.conn = sqlite3.connect(db_name)
+        self.cursor = self.conn.cursor()
+        self.create_table()
+
+    def create_table(self):
+        query = """
+            CREATE TABLE IF NOT EXISTS todo(
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            task TEXT NOT NULL,
+            completed BOOLEAN NOT NULL DEFAULT 0);  -- Set default to 0 (or False)
+        """
+        self.cursor.execute(query)  # Fixed typo: 'cusor' to 'cursor'
+        self.conn.commit()  # Fixed typo: 'commmit' to 'commit'
+        print("TODO table created")  # Fixed typo: 'create' to 'created'
+
+    def get_all(self):
+        query = """
+            SELECT * FROM todo;
+        """
+        todos = self.cursor.execute(query).fetchall()
+        new_todos = []
+        for row in todos:
+            new_todos.append({
+                'id': row[0],
+                'task': row[1],
+                'completed': [-1]
+            })
+        return new_todos
+
+    def create_todo(self, task, completed):
+        query = """
+            INSERT INTO todo (task, completed)
+            VALUES(?,?);
+        """
+        self.cursor.execute(query, (task, completed))
+        self.conn.commit()
+        print(f"'{task}' created successfully")
+
+    def update_todo(self, pk, task, completed):
+        query = """
+            UPDATE todo
+            SET task=?, completed=?
+            WHERE id=?;
+        """
+        self.cursor.execute(query, (task, completed, pk))  # Added missing 'pk' in the execute parameters
+        self.conn.commit()
+        print(f"'{pk}' updated successfully")
+
+    def delete_todo(self, pk):
+        query = """
+            DELETE FROM todo WHERE id=?;  -- Fixed typo: 'DELETE' to 'DELETE'
+        """
+        self.cursor.execute(query, (pk,))
+        self.conn.commit()  # Commit the deletion
+        print(f"'{pk}' deleted successfully")  # Fixed typo: 'updated' to 'deleted'
